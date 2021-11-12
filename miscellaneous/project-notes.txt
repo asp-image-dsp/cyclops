@@ -1,0 +1,16 @@
+Opción 1: Filtrado de una señal de video capturada por una cámara en tiempo real y visualización en VGA
+
+Tareas
+1. Habría que ver cómo es la comunicación con la cámara, hacer esa interfaz y probarla. Vi que depende la cámara, es probable que nos de la información del sensor cruda y haya que aplicar el filtro de Bayer. A lo mejor haya que ver cómo guardar en memoria la imagen, ¿cuánta resolución podemos tener? ¿cuántos FPS podemos tener?
+2. El módulo de procesamiento de imágenes hay que pensarlo para optimizar almacenamiento y velocidad. Hay que trabajar en escala de grises si no conseguimos usar un DAC para cada canal (aumentaría la complejidad hacerlo pero también sería muy interesante). El núcleo del módulo podría ser filtrado con un kernel de 3x3, hay formas de optimizar esto. Realmente no es muy compleja esta parte, la incógnita principal está en cómo es el flujo de datos de entrada y salida, y qué tanto paralelizas las operaciones.
+ ---- Por ejemplo, podemos usar un multiplicador y sumador de 9 palabras y aplicar el kernel de una, y luego paralelizar esto N veces (tantas como nos de la capacidad de la FPGA).
+ ---- Si queremos dejar espacio en la FPGA para otras cosas (como por ejemplo más capacidades de procesamiento para otros efectos), a lo mejor nos conviene serializar de a tramos la imagen.
+3. Módulo controlador de VGA, en este caso sería lo que ya estamos acostumbrados de otras materias, es decir un controlador de VGA. El valor agregado sería pensar cómo hacerlo eficientemente contra un buffer interno que almacena la imagen (por ejemplo en una RAM).
+
+Si esta idea de proyecto es aceptada como 2x1, para mi salimos ganando porque el procesamiento de imágenes en sí mismo no es nada muy loco... sería aplicar filtrado común y corriente de un tamaño limitado. La complejidad pasa por cómo es la arquitectura del diseño para hacer un uso eficiente de la memoria y la velocidad. El verdadero sobre-trabajo que implica procesar imagenes está en el diseño dentro de la FPGA para distribuir la carga en el procesamiento. Me parece un desafío interesante.
+
+Primero me centraría en pensar cómo sería el funcionamiento del sistema completo, luego implementaría la parte de VGA, luego la cámara permitiéndo así que se pruebe conectándola directo a la salida de VGA en la FPGA. Finalmente, agregaría el procesamiento de la imagen.
+
+La cámara OV7670 tiene una salida VGA compatible, en este sentido es relativamente sencillo de hacer la interfaz para capturar la imagen. Presenta la complejidad de ver cómo guardar en un buffer porque tendríamos de pixel a pixel y necesitamos juntar varios para el filtrado.
+
+Sonido
