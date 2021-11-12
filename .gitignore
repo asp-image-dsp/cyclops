@@ -1,0 +1,56 @@
+// Ignore Quartus Prime Lite auto-generated folders
+db/
+qsys_editqsim/
+incremental_db/
+output_files/
+greybox_tmp/
+symbols/greybox_tmp/
+simulation/qsim/
+
+// Ignore simulation files
+*.sft
+*.vo
+*.xrf
+msim_transcript/
+*.ini
+rtl_work/
+*.wlf
+*.do
+
+// Ignore temporal files created based on Verilog modules
+*.v.bak
+*.v.bak1
+*.v.bak2
+*.v.bak3
+*.v.bak4
+*.v.bak5
+*.v.bak6
+*.v.bak7
+*.v.bak8
+*.v.bak9
+*.do.bak
+*.do.bak1
+*.do.bak2
+*.do.bak3
+*.do.bak4
+*.do.bak5
+*.do.bak6
+*.do.bak7
+*.do.bak8
+*.do.bak9
+
+// Ignore auto-generated project related files
+*.qws
+*.rpt
+*.map.summary
+c5_pin_model_dump.txt
+*.done
+*.fit.smsg
+*.fit.summary
+*.jdi
+*.pin
+*.sld
+*.sof
+*.sta.summary
+*.merge.summary
+*.json
