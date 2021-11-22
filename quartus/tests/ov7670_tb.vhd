@@ -38,6 +38,8 @@ architecture ov7670_tb_arc of ov7670_tb is
     signal href         : std_logic := '0';
     signal d            : std_logic_vector (7 downto 0) := "00000000";
     signal data         : buff;
+    signal pready       : std_logic;
+    signal camera_y     : std_logic_vector (7 downto 0);
 
 	
     procedure set(signal sig : inout std_logic) is
@@ -63,13 +65,25 @@ architecture ov7670_tb_arc of ov7670_tb is
 begin
     
     -- Create an instance of the OV7670 capture module
-    module: entity work.ov7670_pixel_capture(ov7670_pixel_capture_arch)
+    camera: entity work.ov7670_pixel_capture(ov7670_pixel_capture_arch)
         port map (
             vsync => vsync,
             pclk => pclk,
             href => href,
-            d => d
+            d => d,
+            y => camera_y,
+            pready => pready
+        );	 
+		
+    bin: entity work.binarization(binarization_arch)				
+        generic map (
+            threshold => 127
+        )
+        port map (
+            clock => pready,
+            byte => camera_y
         );
+
 
     update_data: process is
     begin
