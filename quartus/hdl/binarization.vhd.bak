@@ -23,6 +23,7 @@ entity binarization is
 
 	port(
 		signal byte	: in std_logic_vector(7 downto 0);
+		signal clock	: in std_logic;
 		signal y		: out std_logic
 	);
 end entity binarization;
@@ -33,13 +34,15 @@ end entity binarization;
 architecture binarization_arch of binarization is
 begin 
 
-	update: process (byte)
+	update: process (clock)
 	begin
-		if (unsigned(byte) > threshold) then
-			y <= '1';
-		else 
-			y <= '0';	
-		end if;			  
+		if (rising_edge(clock)) then
+			if (unsigned(byte) > threshold) then
+				y <= '1';
+			else 
+				y <= '0';	
+			end if;			  
+		end if;
 	end process update;
 	
 end architecture binarization_arch;
