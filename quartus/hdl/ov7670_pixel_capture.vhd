@@ -26,6 +26,7 @@ entity ov7670_pixel_capture is
         signal y        : out std_logic_vector (7 downto 0);
         signal u        : out std_logic_vector (7 downto 0);
         signal v        : out std_logic_vector (7 downto 0);
+        signal paddress : out std_logic_vector (18 downto 0);
         signal pready   : out std_logic
     );
 end entity ov7670_pixel_capture;
@@ -35,67 +36,69 @@ end entity ov7670_pixel_capture;
 -----------------------------------------------------------------------------------
 
 architecture ov7670_pixel_capture_arch of ov7670_pixel_capture is
-    signal byte_selector    : std_logic_vector (1 downto 0) := "00";
-    signal prev_u           : std_logic_vector (7 downto 0) := "00000000";
-    signal prev_v           : std_logic_vector (7 downto 0) := "00000000";
-    signal prev_y0          : std_logic_vector (7 downto 0) := "00000000";
-    signal prev_y1          : std_logic_vector (7 downto 0) := "00000000";
-    signal curr_u           : std_logic_vector (7 downto 0) := "00000000";
-    signal curr_y0          : std_logic_vector (7 downto 0) := "00000000";
+    signal byte_selector	: std_logic_vector (1 downto 0) := "00";
+    signal buffer_u			: std_logic_vector (7 downto 0) := "00000000";
+    signal buffer_v			: std_logic_vector (7 downto 0) := "00000000";
+    signal buffer_y0			: std_logic_vector (7 downto 0) := "00000000";
+    signal buffer_y1			: std_logic_vector (7 downto 0) := "00000000";
+
+    signal pixel_address    : std_logic_vector (18 downto 0);
+    signal pixel_ready      : std_logic;
+    signal pixel_init       : std_logic;
 begin
     
     capture: process (pclk)
     begin
+        -- Map the internal signals to the outputs (to be read)
+        paddress <= pixel_address;
+        pready <= pixel_ready;
 
-        -- Data capture to buffer
+        -- Generate the pixel ready clock
+        pixel_ready <= byte_selector(0) and href and pixel_init;
+
+        -- When the free running pixel clock has a rising edge
+        -- run the decoding process for the next incoming byte
         if rising_edge(pclk) then
-            
-            -- Capture data if valid
+
+            -- In the blanking zone of the vertical signal reset the pixel address
+            if (vsync = '1') then
+                pixel_address <= (others => '0');
+                pixel_init <= '0';
+            elsif (href = '1' and pixel_init = '1' and byte_selector(0) = '0') then
+                pixel_address <= std_logic_vector(unsigned(pixel_address) + 1);
+            end if;
+
+            -- Verify the data is valid (we're in a row)
             if (href = '1') then
                 if (byte_selector = "00") then
-							u <= d;
-                    --curr_u <= d;
+                    -- Generate buffered output
+                    u <= buffer_u;
+                    v <= buffer_v;
+                    y <= buffer_y0;
+                    -- Save U component in buffer
+                    buffer_u <= d;
                 elsif (byte_selector = "01") then
-                    --curr_y0 <= d;
-							y <= d;
+                    -- Save Y component in buffer
+                    buffer_y0 <= d;
                 elsif (byte_selector = "10") then
-							v <= d;
-                    --prev_v <= d;
+                    -- Generate buffered output (uses same U and V as before)
+                    y <= buffer_y1;
+                    -- Save V component in buffer
+                    buffer_v <= d;
                 elsif (byte_selector = "11") then
-                    --prev_y1 <= d;
-							y <= d;
+                    -- Save Y component in buffer
+                    buffer_y1 <= d;
+                    -- If this is the first loop, set the flag
+                    if (pixel_init = '0') then
+                        pixel_init <= '1';
+                    end if;
                 end if;
-					 byte_selector <= std_logic_vector(unsigned(byte_selector) + 1);
-				else
-					byte_selector <= "00";
+                byte_selector <= std_logic_vector(unsigned(byte_selector) + 1);
+            else
+                byte_selector <= "00";
             end if;
-        
+
         end if;
-
-        -- Update output from buffer
---        if falling_edge(pclk) then
---            if (href = '1') then
---                -- Divide update frequency by 2
---                if ( byte_selector(0) = '1') then                
---                    if (byte_selector = "01") then
---                        u <= prev_u;
---                        v <= prev_v;
---                        y <= prev_y0;
---                    elsif (byte_selector = "11") then
---                        y <= prev_y1;	
---                        prev_u <= curr_u;
---                        prev_y0 <= curr_y0; 
---                    end if;
---                    -- Notify output is ready
---				    pready <= '0';
---                else 
---                    pready <= '1';
---                end if;
---
---            end if;
---        end if;
-
+        
     end process capture;
-
-    
 end architecture ov7670_pixel_capture_arch;
