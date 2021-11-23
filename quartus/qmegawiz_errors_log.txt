@@ -1,0 +1,13 @@
+
+
+C:/intelFPGA_lite/projects/cyclops/quartus/hdl/generated/ram.vhd
+
+Nov 23 07PM:55:30>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+ram.v
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?

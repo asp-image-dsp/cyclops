@@ -40,7 +40,7 @@ end entity vga_output;
 -- Architecture
 -----------------------------------------------------------------------------------
 architecture vga_output_arch of vga_output is
-    signal read_address  : integer range 0 to 307199;
+    signal read_address  : integer;
     signal h_count       : integer range 0 to 1024 := 0;
     signal v_count       : std_logic_vector (9 downto 0);-- integer range 0 to 1024 := 0;
     signal is_active     : std_logic;
