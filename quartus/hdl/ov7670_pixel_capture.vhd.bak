@@ -47,9 +47,14 @@ architecture ov7670_pixel_capture_arch of ov7670_pixel_capture is
     signal pixel_init       : std_logic;
 begin
     
-	 
     capture: process (pclk)
     begin
+        -- Map the internal signals to the outputs (to be read)
+        paddress <= pixel_address;
+        pready <= pixel_ready;
+
+        -- Generate the pixel ready clock
+        pixel_ready <= byte_selector(0) and href and pixel_init;
 
         -- When the free running pixel clock has a rising edge
         -- run the decoding process for the next incoming byte
@@ -57,15 +62,11 @@ begin
 
             -- In the blanking zone of the vertical signal reset the pixel address
             if (vsync = '1') then
-                pixel_address <= std_logic_vector(to_unsigned(0, 19));
+                pixel_address <= (others => '0');
                 pixel_init <= '0';
-            elsif ( (href = '1') and (byte_selector(0) = '0') ) then
+            elsif (href = '1' and pixel_init = '1' and byte_selector(0) = '0') then
                 pixel_address <= std_logic_vector(unsigned(pixel_address) + 1);
             end if;
-				
-				if ((vsync = '0') and (byte_selector(0) = '0')) then
---                pixel_address <= std_logic_vector(unsigned(pixel_address) + 1);				
-				end if;
 
             -- Verify the data is valid (we're in a row)
             if (href = '1') then
@@ -100,13 +101,4 @@ begin
         end if;
         
     end process capture;
-	 
-	 
-     -- Map the internal signals to the outputs (to be read)
-	  paddress <= pixel_address;
-	  pready <= pixel_ready;
-
-	  -- Generate the pixel ready clock
-	  pixel_ready <= byte_selector(0) and href and pixel_init;
-	  
 end architecture ov7670_pixel_capture_arch;
