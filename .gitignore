@@ -7,6 +7,7 @@ greybox_tmp/
 symbols/greybox_tmp/
 */simulation/qsim/
 */simulation/modelsim/
+.qsys_edit/
 
 // Ignore simulation files
 *.sft
@@ -55,3 +56,4 @@ c5_pin_model_dump.txt
 *.sta.summary
 *.merge.summary
 *.json
+qmegawiz_errors_log.txt
