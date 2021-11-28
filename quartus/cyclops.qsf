@@ -215,7 +215,6 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity D
 set_global_assignment -name BLOCK_DESIGN_NAMING QUARTUSII
 set_global_assignment -name VERILOG_FILE hdl/generated/ram.v
 set_global_assignment -name VHDL_FILE hdl/vga_output.vhd
-set_global_assignment -name VHDL_FILE hdl/generated/pll.vhd
 set_global_assignment -name VHDL_FILE hdl/ov7670_pixel_capture.vhd
 set_global_assignment -name VHDL_FILE hdl/binarization.vhd
 set_global_assignment -name BDF_FILE cyclops.bdf
