@@ -67,14 +67,15 @@ begin
                 byte_selector <= "00";
                 enable <= '0';
             end if;
-            
-            -- Increment the pixel address counter
-            if (href = '1' and byte_selector(0) = '0' and enable = '1') then
-                pixel_address <= std_logic_vector(unsigned(pixel_address) + 1);
-            end if;
 
             -- Verify the data is valid (we're in a row)
             if (href = '1') then
+            
+                -- Increment the pixel address counter
+                if (byte_selector(0) = '0' and enable = '1') then
+                    pixel_address <= std_logic_vector(unsigned(pixel_address) + 1);
+                end if;
+
                 if (byte_selector = "00") then
                     -- Enable signals
                     if (pixel_init = '1') then
