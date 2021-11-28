@@ -29,10 +29,7 @@ entity vga_output is
         signal g        : out std_logic_vector(word_width - 1 downto 0);
         signal b        : out std_logic_vector(word_width - 1 downto 0);
         signal address  : out std_logic_vector(address_width - 1 downto 0);
-		  signal mem_clk	: out std_logic;
-		  signal activ		: out std_logic := '0'; -- debug
-		  signal counth	: out integer range 0 to 1000; -- debug
-		  signal countv	: out integer range 0 to 1000 -- debug
+		  signal mem_clk	: out std_logic
     );
 end entity vga_output;
 
@@ -133,9 +130,6 @@ begin
         end if;
     end process update_rgb;
 	 
-	 activ <= is_active;
-	 counth <= h_count;
-	 countv <= to_integer(unsigned(v_count));
 	 address <= std_logic_vector(to_unsigned(read_address, address_width));
 
 end architecture vga_output_arch;
