@@ -5,7 +5,8 @@ incremental_db/
 output_files/
 greybox_tmp/
 symbols/greybox_tmp/
-simulation/qsim/
+*/simulation/qsim/
+*/simulation/modelsim/
 
 // Ignore simulation files
 *.sft

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY cyclops
+set_global_assignment -name TOP_LEVEL_ENTITY column_counter
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "01:14:47  NOVEMBER 23, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -51,9 +51,6 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_R8 -to CLOCK_50
 set_location_assignment PIN_A15 -to LED[0]
 set_location_assignment PIN_A13 -to LED[1]
@@ -214,19 +211,20 @@ set_global_assignment -name PARTITION_COLOR 16764057 -entity DE0_NANO -section_i
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_NANO -section_id Top
 set_global_assignment -name BLOCK_DESIGN_NAMING QUARTUSII
 set_global_assignment -name SEARCH_PATH symbols
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name BDF_FILE bdf/column_counter.bdf
 set_global_assignment -name VHDL_FILE hdl/fifo_controller.vhd
-set_global_assignment -name VHDL_FILE hdl/row_fifo.vhd
 set_global_assignment -name VHDL_FILE hdl/vga_output.vhd
 set_global_assignment -name VHDL_FILE hdl/ov7670_pixel_capture.vhd
 set_global_assignment -name VHDL_FILE hdl/binarization.vhd
 set_global_assignment -name BDF_FILE cyclops.bdf
 set_global_assignment -name QIP_FILE hdl/generated/pll.qip
 set_global_assignment -name QIP_FILE hdl/generated/ram.qip
-set_global_assignment -name QIP_FILE hdl/generated/counter.qip
-set_global_assignment -name QIP_FILE hdl/generated/counter_reset.qip
 set_global_assignment -name BDF_FILE cyclops_wire.bdf
 set_global_assignment -name BDF_FILE bdf/processing.bdf
-set_global_assignment -name BDF_FILE bdf/column_counter.bdf
 set_global_assignment -name BDF_FILE bdf/row_fifo.bdf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name QIP_FILE hdl/generated/ram_row.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE column_counter_wave.vwf
