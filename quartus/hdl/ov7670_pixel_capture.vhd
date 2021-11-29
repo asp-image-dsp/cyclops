@@ -28,7 +28,8 @@ entity ov7670_pixel_capture is
         signal u        : out std_logic_vector (7 downto 0);
         signal v        : out std_logic_vector (7 downto 0);
         signal paddress : out std_logic_vector (18 downto 0);
-        signal pready   : out std_logic
+        signal pready   : out std_logic;
+        signal rready   : out std_logic
     );
 end entity ov7670_pixel_capture;
 
@@ -51,6 +52,7 @@ begin
     -- Map the internal signals to the outputs (to be read)
     paddress <= pixel_address;
     pready <= pixel_ready;
+    rready <= href and enable;
 
     -- Generate the pixel ready clock
     pixel_ready <= byte_selector(0) and href and enable;

@@ -87,6 +87,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "pready" (rect 135 91 163 103)(font "Arial" ))
 		(line (pt 184 96)(pt 168 96)(line_width 1))
 	)
+	(port
+		(pt 184 112)
+		(output)
+		(text "rready" (rect 0 0 27 12)(font "Arial" ))
+		(text "rready" (rect 136 107 163 119)(font "Arial" ))
+		(line (pt 184 112)(pt 168 112)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 168 128)(line_width 1))
 	)

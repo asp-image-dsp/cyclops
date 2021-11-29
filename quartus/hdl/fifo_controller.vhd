@@ -39,10 +39,10 @@ end entity fifo_controller;
 -----------------------------------------------------------------------------------
 
 architecture fifo_controller_arch of fifo_controller is
-    signal i_0 : std_logic_vector (1 downto 0);
-    signal i_1 : std_logic_vector (1 downto 0);
-    signal i_2 : std_logic_vector (1 downto 0);
-    signal i_3 : std_logic_vector (1 downto 0);
+    signal i_0 : std_logic_vector (1 downto 0) := "00";
+    signal i_1 : std_logic_vector (1 downto 0) := "01";
+    signal i_2 : std_logic_vector (1 downto 0) := "10";
+    signal i_3 : std_logic_vector (1 downto 0) := "11";
 begin
 
     index_0 <= i_0;
