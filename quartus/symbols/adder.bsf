@@ -1,0 +1,125 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 0 0 272 176)
+	(text "adder" (rect 121 0 158 16)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 160 25 172)(font "Arial" ))
+	(port
+		(pt 0 24)
+		(input)
+		(text "data8x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data8x[15..0]" (rect 4 10 65 23)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 126 24)(line_width 3))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "data7x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data7x[15..0]" (rect 4 26 65 39)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 126 40)(line_width 3))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "data6x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data6x[15..0]" (rect 4 42 65 55)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 126 56)(line_width 3))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "data5x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data5x[15..0]" (rect 4 58 65 71)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 126 72)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "data4x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data4x[15..0]" (rect 4 74 65 87)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 126 88)(line_width 3))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "data3x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data3x[15..0]" (rect 4 90 65 103)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 126 104)(line_width 3))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "data2x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data2x[15..0]" (rect 4 106 65 119)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 126 120)(line_width 3))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "data1x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data1x[15..0]" (rect 4 122 65 135)(font "Arial" (font_size 8)))
+		(line (pt 0 136)(pt 126 136)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "data0x[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data0x[15..0]" (rect 4 138 65 151)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 126 152)(line_width 3))
+	)
+	(port
+		(pt 272 88)
+		(output)
+		(text "result[19..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "result[19..0]" (rect 212 74 267 87)(font "Arial" (font_size 8)))
+		(line (pt 272 88)(pt 181 88)(line_width 3))
+	)
+	(drawing
+		(text "+" (rect 117 9 241 33)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 25 241 65)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 41 241 97)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 57 241 129)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 73 241 161)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 89 241 193)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 105 241 225)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 121 241 257)(font "Arial" (font_size 10)))
+		(text "+" (rect 117 137 241 289)(font "Arial" (font_size 10)))
+		(text "Input SIGNED" (rect 205 157 468 325)(font "Arial" ))
+		(line (pt 162 88)(pt 172 88))
+		(line (pt 162 88)(pt 162 98))
+		(line (pt 162 88)(pt 152 88))
+		(line (pt 162 88)(pt 162 78))
+		(line (pt 126 88)(pt 142 88))
+		(line (pt 126 72)(pt 144 76))
+		(line (pt 126 104)(pt 144 100))
+		(line (pt 126 24)(pt 126 56))
+		(line (pt 126 56)(pt 151 72))
+		(line (pt 126 120)(pt 151 104))
+		(line (pt 126 152)(pt 126 120))
+		(line (pt 0 0)(pt 274 0))
+		(line (pt 274 0)(pt 274 178))
+		(line (pt 0 178)(pt 274 178))
+		(line (pt 0 0)(pt 0 178))
+		(circle (rect 142 68 182 108))
+	)
+)
