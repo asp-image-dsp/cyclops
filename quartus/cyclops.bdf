@@ -107,7 +107,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 2432 368 2608 384)
+	(rect 2560 360 2736 376)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "GPIO_1[33]" (rect 90 0 147 12)(font "Arial" ))
 	(pt 0 8)
@@ -120,11 +120,11 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2608 384 2672 408))
+	(annotation_block (location)(rect 2736 376 2800 400))
 )
 (pin
 	(output)
-	(rect 2432 264 2608 280)
+	(rect 2560 256 2736 272)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "GPIO_1[3]" (rect 90 0 139 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -137,11 +137,11 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2640 208 2696 232))
+	(annotation_block (location)(rect 2768 200 2824 224))
 )
 (pin
 	(output)
-	(rect 2432 280 2608 296)
+	(rect 2560 272 2736 288)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "GPIO_1[5]" (rect 90 0 139 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -154,11 +154,11 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2640 240 2696 264))
+	(annotation_block (location)(rect 2768 232 2824 256))
 )
 (pin
 	(output)
-	(rect 2432 296 2608 312)
+	(rect 2560 288 2736 304)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "GPIO_1[7]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
@@ -171,11 +171,11 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2640 272 2696 296))
+	(annotation_block (location)(rect 2768 264 2824 288))
 )
 (pin
 	(output)
-	(rect 2432 312 2608 328)
+	(rect 2560 304 2736 320)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "GPIO_1[9]" (rect 90 0 139 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -188,11 +188,11 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2640 312 2696 336))
+	(annotation_block (location)(rect 2768 304 2824 328))
 )
 (pin
 	(output)
-	(rect 2432 328 2608 344)
+	(rect 2560 320 2736 336)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "GPIO_1[11]" (rect 90 0 145 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -205,10 +205,10 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2640 336 2696 360))
+	(annotation_block (location)(rect 2768 328 2824 352))
 )
 (symbol
-	(rect 896 224 1040 304)
+	(rect 936 192 1080 272)
 	(text "binarization" (rect 5 0 59 12)(font "Arial" ))
 	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -233,10 +233,10 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 128 64))
 	)
-	(annotation_block (parameter)(rect 896 184 1065 222))
+	(annotation_block (parameter)(rect 936 272 1105 310))
 )
 (symbol
-	(rect 1320 272 1352 288)
+	(rect 1408 240 1440 256)
 	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
 	(text "inst3" (rect 3 5 25 22)(font "Intel Clear" )(invisible))
 	(port
@@ -251,7 +251,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1472 224 1728 376)
+	(rect 1560 192 1816 344)
 	(text "ram" (rect 117 0 142 16)(font "Arial" (font_size 10)))
 	(text "inst5" (rect 8 136 30 153)(font "Intel Clear" ))
 	(port
@@ -416,7 +416,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1904 240 2208 416)
+	(rect 2032 232 2336 408)
 	(text "vga_output" (rect 5 0 60 12)(font "Arial" ))
 	(text "inst2" (rect 8 160 30 177)(font "Intel Clear" ))
 	(port
@@ -495,7 +495,7 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 288 160))
 	)
-	(annotation_block (parameter)(rect 1904 176 2096 233))
+	(annotation_block (parameter)(rect 2032 168 2224 225))
 )
 (symbol
 	(rect -64 224 120 368)
@@ -636,7 +636,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1416 320 1464 352)
+	(rect 1504 288 1552 320)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst9" (rect 3 21 25 38)(font "Intel Clear" ))
 	(port
@@ -660,92 +660,195 @@ https://fpgasoftware.intel.com/eula.
 		(circle (rect 31 12 39 20))
 	)
 )
-(connector
-	(text "RAM_R_ADDR[18..0]" (rect 2216 336 2316 353)(font "Intel Clear" ))
-	(pt 2208 352)
-	(pt 2304 352)
-	(bus)
+(symbol
+	(rect 1616 592 1776 760)
+	(text "LPM_ADD_SUB" (rect 37 0 149 16)(font "Arial" (font_size 10)))
+	(text "inst10" (rect 3 156 31 173)(font "Intel Clear" ))
+	(port
+		(pt 0 144)
+		(input)
+		(text "aclr" (rect 20 130 41 144)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 20 130 41 144)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 15 144))
+		(unused)
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "add_sub" (rect 20 17 69 31)(font "Arial" (font_size 8)))
+		(text "add_sub" (rect 20 17 69 31)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 15 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "cin" (rect 20 34 36 48)(font "Arial" (font_size 8)))
+		(text "cin" (rect 20 34 36 48)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 15 48))
+		(unused)
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "clken" (rect 20 90 49 104)(font "Arial" (font_size 8)))
+		(text "clken" (rect 20 90 49 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 56 104))
+		(unused)
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "clock" (rect 20 74 49 88)(font "Arial" (font_size 8)))
+		(text "clock" (rect 20 74 49 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 56 88))
+		(unused)
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "dataa[LPM_WIDTH-1..0]" (rect 20 57 153 71)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 20 57 58 71)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 15 72)(line_width 3))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "datab[LPM_WIDTH-1..0]" (rect 20 105 153 119)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 20 105 58 119)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 15 120)(line_width 3))
+	)
+	(port
+		(pt 160 144)
+		(output)
+		(text "cout" (rect 120 129 144 143)(font "Arial" (font_size 8)))
+		(text "cout" (rect 120 129 144 143)(font "Arial" (font_size 8)))
+		(line (pt 145 144)(pt 160 144))
+		(unused)
+	)
+	(port
+		(pt 160 128)
+		(output)
+		(text "overflow" (rect 99 113 150 127)(font "Arial" (font_size 8)))
+		(text "overflow" (rect 97 113 148 127)(font "Arial" (font_size 8)))
+		(line (pt 145 128)(pt 160 128))
+		(unused)
+	)
+	(port
+		(pt 160 96)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 109 81 242 95)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 108 81 146 95)(font "Arial" (font_size 8)))
+		(line (pt 145 96)(pt 160 96)(line_width 3))
+	)
+	(parameter
+		"LPM_DIRECTION"
+		""
+		"Selects between addition, subtraction, or both"
+		"\"DEFAULT\"" "\"ADD\"" "\"SUB\"" 
+	)
+	(parameter
+		"LPM_PIPELINE"
+		""
+		"Output latency in clock cycles - requires use of optional clock"
+		"0" "1" "2" "3" "4" 
+	)
+	(parameter
+		"LPM_REPRESENTATION"
+		""
+		"Numeric representation of inputs"
+		"\"UNSIGNED\"" "\"SIGNED\"" 
+	)
+	(parameter
+		"LPM_WIDTH"
+		"19"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(parameter
+		"MAXIMIZE_SPEED"
+		""
+		"Hint to help tradeoff between speed and size"
+		" 0" " 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" 
+	)
+	(parameter
+		"ONE_INPUT_IS_CONSTANT"
+		""
+		"Hint to help minimize the number of LCELLs"
+		"\"NO\"" "\"YES\"" 
+	)
+	(drawing
+		(line (pt 16 48)(pt 72 48))
+		(line (pt 16 152)(pt 144 152))
+		(line (pt 16 16)(pt 144 16))
+		(line (pt 16 72)(pt 56 72)(line_width 3))
+		(line (pt 16 120)(pt 56 120)(line_width 3))
+		(line (pt 104 96)(pt 144 96)(line_width 3))
+		(line (pt 88 128)(pt 144 128))
+		(line (pt 16 32)(pt 88 32))
+		(line (pt 80 144)(pt 144 144))
+		(line (pt 16 144)(pt 72 144))
+		(line (pt 104 112)(pt 104 80))
+		(line (pt 88 128)(pt 88 120))
+		(line (pt 16 152)(pt 16 16))
+		(line (pt 144 152)(pt 144 16))
+		(line (pt 56 136)(pt 56 56))
+		(line (pt 72 64)(pt 72 48))
+		(line (pt 88 72)(pt 88 32))
+		(line (pt 80 144)(pt 80 124))
+		(line (pt 72 144)(pt 72 128))
+		(line (pt 56 56)(pt 104 80))
+		(line (pt 56 136)(pt 104 112))
+	)
+	(annotation_block (parameter)(rect 1616 456 1826 589))
 )
-(connector
-	(text "RAM_RCLK" (rect 2248 352 2304 369)(font "Intel Clear" ))
-	(pt 2208 368)
-	(pt 2304 368)
+(symbol
+	(rect 1480 608 1512 640)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst11" (rect -6 3 11 31)(font "Intel Clear" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
 )
-(connector
-	(text "VGA_CLK" (rect 1849 256 1896 273)(font "Intel Clear" ))
-	(pt 1840 272)
-	(pt 1904 272)
-)
-(connector
-	(text "OV7670_CLK" (rect 2374 360 2438 377)(font "Intel Clear" ))
-	(pt 2368 376)
-	(pt 2432 376)
-)
-(connector
-	(text "RAM_W_ADDR[18..0]" (rect 1368 256 1471 273)(font "Intel Clear" ))
-	(pt 1352 272)
-	(pt 1472 272)
-	(bus)
-)
-(connector
-	(pt 1336 288)
-	(pt 1472 288)
-)
-(connector
-	(text "RAM_R_ADDR[18..0]" (rect 1365 296 1465 313)(font "Intel Clear" ))
-	(pt 1352 312)
-	(pt 1472 312)
-	(bus)
-)
-(connector
-	(text "RAM_RCLK" (rect 1368 336 1424 353)(font "Intel Clear" ))
-	(pt 1352 352)
-	(pt 1472 352)
-)
-(connector
-	(text "RAM_OUT" (rect 1850 272 1900 289)(font "Intel Clear" ))
-	(pt 1904 288)
-	(pt 1816 288)
-)
-(connector
-	(text "RAM_OUT" (rect 1736 296 1786 313)(font "Intel Clear" ))
-	(pt 1728 312)
-	(pt 1816 312)
-)
-(connector
-	(pt 1816 288)
-	(pt 1816 312)
-)
-(connector
-	(text "VGA_VSYNC" (rect 2248 256 2309 273)(font "Intel Clear" ))
-	(pt 2208 272)
-	(pt 2432 272)
-)
-(connector
-	(text "VGA_HSYNC" (rect 2246 272 2307 289)(font "Intel Clear" ))
-	(pt 2208 288)
-	(pt 2432 288)
-)
-(connector
-	(text "VGA_R" (rect 2266 288 2300 305)(font "Intel Clear" ))
-	(pt 2208 304)
-	(pt 2432 304)
-)
-(connector
-	(text "VGA_G" (rect 2264 304 2298 321)(font "Intel Clear" ))
-	(pt 2208 320)
-	(pt 2432 320)
-)
-(connector
-	(text "VGA_B" (rect 2266 320 2300 337)(font "Intel Clear" ))
-	(pt 2208 336)
-	(pt 2432 336)
-)
-(connector
-	(text "RAM_W_ADDR[18..0]" (rect 138 288 241 305)(font "Intel Clear" ))
-	(pt 120 304)
-	(pt 232 304)
-	(bus)
+(symbol
+	(rect 1344 680 1456 728)
+	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
+	(text "inst12" (rect 3 37 31 54)(font "Intel Clear" ))
+	(port
+		(pt 112 32)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 19 208 33)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 19 113 33)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 112 32)(line_width 3))
+	)
+	(parameter
+		"LPM_CVALUE"
+		"1280"
+		"Unsigned value to which outputs will be set"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"19"
+		"Width of output, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+	)
+	(drawing
+		(text "(cvalue)" (rect 21 26 68 40)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 64 24))
+		(line (pt 16 40)(pt 64 40))
+		(line (pt 64 40)(pt 64 24))
+		(line (pt 16 40)(pt 16 24))
+	)
+	(annotation_block (parameter)(rect 1320 624 1457 681))
 )
 (connector
 	(text "rready" (rect 129 320 159 337)(font "Intel Clear" ))
@@ -768,11 +871,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt -96 544)
 )
 (connector
-	(pt 656 224)
-	(pt 664 224)
-	(bus)
-)
-(connector
 	(text "pready" (rect 360 208 393 225)(font "Intel Clear" ))
 	(pt 352 224)
 	(pt 440 224)
@@ -783,7 +881,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 440 240)
 )
 (connector
-	(text "y[7..0]" (rect 113 240 142 257)(font "Intel Clear" ))
+	(text "y[7..0]" (rect 129 240 158 257)(font "Intel Clear" ))
 	(pt 120 256)
 	(pt 440 256)
 	(bus)
@@ -797,30 +895,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "VGA_CLK" (rect 176 528 223 545)(font "Intel Clear" ))
 	(pt 160 544)
 	(pt 232 544)
-)
-(connector
-	(text "pready" (rect 1364 320 1397 337)(font "Intel Clear" ))
-	(pt 1352 336)
-	(pt 1416 336)
-)
-(connector
-	(pt 1464 336)
-	(pt 1472 336)
-)
-(connector
-	(pt 664 224)
-	(pt 664 256)
-	(bus)
-)
-(connector
-	(pt 664 256)
-	(pt 896 256)
-	(bus)
-)
-(connector
-	(text "RAM_W_DATA" (rect 1053 240 1126 257)(font "Intel Clear" ))
-	(pt 1040 256)
-	(pt 1472 256)
 )
 (connector
 	(text "clk" (rect -336 344 -322 361)(font "Intel Clear" ))
@@ -848,19 +922,140 @@ https://fpgasoftware.intel.com/eula.
 	(pt -64 304)
 	(bus)
 )
+(connector
+	(text "paddress[18..0]" (rect 130 288 201 305)(font "Intel Clear" ))
+	(pt 120 304)
+	(pt 232 304)
+	(bus)
+)
+(connector
+	(text "paddress[18..0]" (rect 1512 648 1583 665)(font "Intel Clear" ))
+	(pt 1480 664)
+	(pt 1616 664)
+	(bus)
+)
+(connector
+	(text "ram_write_address[18..0]" (rect 1780 672 1900 689)(font "Intel Clear" ))
+	(pt 1776 688)
+	(pt 1896 688)
+	(bus)
+)
+(connector
+	(pt 1512 624)
+	(pt 1616 624)
+)
+(connector
+	(text "pixel_address_offset[18..0]" (rect 1466 696 1593 713)(font "Intel Clear" ))
+	(pt 1456 712)
+	(pt 1616 712)
+	(bus)
+)
+(connector
+	(text "RAM_R_ADDR[18..0]" (rect 2344 328 2444 345)(font "Intel Clear" ))
+	(pt 2336 344)
+	(pt 2432 344)
+	(bus)
+)
+(connector
+	(text "RAM_RCLK" (rect 2376 344 2432 361)(font "Intel Clear" ))
+	(pt 2336 360)
+	(pt 2432 360)
+)
+(connector
+	(text "VGA_CLK" (rect 1977 248 2024 265)(font "Intel Clear" ))
+	(pt 1968 264)
+	(pt 2032 264)
+)
+(connector
+	(text "OV7670_CLK" (rect 2502 352 2566 369)(font "Intel Clear" ))
+	(pt 2496 368)
+	(pt 2560 368)
+)
+(connector
+	(text "VGA_VSYNC" (rect 2376 248 2437 265)(font "Intel Clear" ))
+	(pt 2336 264)
+	(pt 2560 264)
+)
+(connector
+	(text "VGA_HSYNC" (rect 2374 264 2435 281)(font "Intel Clear" ))
+	(pt 2336 280)
+	(pt 2560 280)
+)
+(connector
+	(text "VGA_R" (rect 2394 280 2428 297)(font "Intel Clear" ))
+	(pt 2336 296)
+	(pt 2560 296)
+)
+(connector
+	(text "VGA_G" (rect 2392 296 2426 313)(font "Intel Clear" ))
+	(pt 2336 312)
+	(pt 2560 312)
+)
+(connector
+	(text "VGA_B" (rect 2394 312 2428 329)(font "Intel Clear" ))
+	(pt 2336 328)
+	(pt 2560 328)
+)
+(connector
+	(pt 1552 304)
+	(pt 1560 304)
+)
+(connector
+	(text "RAM_OUT" (rect 2066 264 2116 281)(font "Intel Clear" ))
+	(pt 2032 280)
+	(pt 1816 280)
+)
+(connector
+	(text "ram_write_address[18..0]" (rect 1448 224 1568 241)(font "Intel Clear" ))
+	(pt 1440 240)
+	(pt 1560 240)
+	(bus)
+)
+(connector
+	(pt 1424 256)
+	(pt 1560 256)
+)
+(connector
+	(text "RAM_R_ADDR[18..0]" (rect 1453 264 1553 281)(font "Intel Clear" ))
+	(pt 1440 280)
+	(pt 1560 280)
+	(bus)
+)
+(connector
+	(text "RAM_RCLK" (rect 1456 304 1512 321)(font "Intel Clear" ))
+	(pt 1440 320)
+	(pt 1560 320)
+)
+(connector
+	(text "pready" (rect 1452 288 1485 305)(font "Intel Clear" ))
+	(pt 1440 304)
+	(pt 1504 304)
+)
+(connector
+	(text "RAM_W_DATA" (rect 1101 208 1174 225)(font "Intel Clear" ))
+	(pt 1560 224)
+	(pt 1080 224)
+)
+(connector
+	(pt 656 224)
+	(pt 936 224)
+	(bus)
+)
 (text "CLOCK GENERATION" (rect -192 448 -67 467)(font "Intel Clear" (font_size 8)))
 (text "OV7670 CAPTURE" (rect -192 152 -80 171)(font "Intel Clear" (font_size 8)))
-(text "VGA DRIVER" (rect 1824 152 1898 171)(font "Intel Clear" (font_size 8)))
-(text "RAM" (rect 1312 152 1339 171)(font "Intel Clear" (font_size 8)))
-(text "DATA BINARIZATION" (rect 824 152 950 171)(font "Intel Clear" (font_size 8)))
+(text "VGA DRIVER" (rect 1952 144 2026 163)(font "Intel Clear" (font_size 8)))
+(text "RAM" (rect 1312 120 1339 139)(font "Intel Clear" (font_size 8)))
+(text "DATA BINARIZATION" (rect 864 120 990 139)(font "Intel Clear" (font_size 8)))
 (text "INPUT PORTS" (rect -592 152 -508 171)(font "Intel Clear" (font_size 8)))
-(text "OUTPUT PORTS" (rect 2360 152 2459 171)(font "Intel Clear" (font_size 8)))
-(text "OV7670 CAPTURE" (rect 312 152 424 171)(font "Intel Clear" (font_size 8)))
+(text "OUTPUT PORTS" (rect 2488 144 2587 163)(font "Intel Clear" (font_size 8)))
+(text "PROCESSING" (rect 312 152 392 171)(font "Intel Clear" (font_size 8)))
+(text "CALCULATE UPDATE ADDRESS" (rect 1312 424 1500 443)(font "Intel Clear" (font_size 8)))
 (rectangle (rect -192 464 256 664))
 (rectangle (rect -192 168 256 424))
-(rectangle (rect 1824 168 2320 424))
-(rectangle (rect 1312 168 1808 424))
-(rectangle (rect 824 168 1152 424))
+(rectangle (rect 1952 160 2448 416))
+(rectangle (rect 1312 136 1912 392))
+(rectangle (rect 864 136 1192 392))
 (rectangle (rect -592 168 -248 424))
-(rectangle (rect 2360 168 2712 424))
+(rectangle (rect 2488 160 2840 416))
 (rectangle (rect 312 168 760 424))
+(rectangle (rect 1312 440 1912 784))

@@ -211,18 +211,18 @@ set_global_assignment -name PARTITION_COLOR 16764057 -entity DE0_NANO -section_i
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_NANO -section_id Top
 set_global_assignment -name BLOCK_DESIGN_NAMING QUARTUSII
 set_global_assignment -name SEARCH_PATH symbols
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE hdl/generated/ram_row.vhd
+set_global_assignment -name VHDL_FILE hdl/generated/ram.vhd
+set_global_assignment -name VHDL_FILE hdl/generated/pll.vhd
 set_global_assignment -name BDF_FILE bdf/column_counter.bdf
 set_global_assignment -name VHDL_FILE hdl/fifo_controller.vhd
 set_global_assignment -name VHDL_FILE hdl/vga_output.vhd
 set_global_assignment -name VHDL_FILE hdl/ov7670_pixel_capture.vhd
 set_global_assignment -name VHDL_FILE hdl/binarization.vhd
 set_global_assignment -name BDF_FILE cyclops.bdf
-set_global_assignment -name QIP_FILE hdl/generated/pll.qip
-set_global_assignment -name QIP_FILE hdl/generated/ram.qip
 set_global_assignment -name BDF_FILE bdf/processing.bdf
 set_global_assignment -name BDF_FILE bdf/row_fifo.bdf
-set_global_assignment -name QIP_FILE hdl/generated/ram_row.qip
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
