@@ -80,6 +80,17 @@ architecture kernel_arch of kernel is
     signal c3_7	: integer := 1 * 256 / 16;
     signal c3_8	: integer := 1 * 256 / 16;
 
+    -- Sobel coefficients
+    signal c4_0	: integer := 2 * 255 / 2;
+    signal c4_1	: integer := 2 * 255 / 2;
+    signal c4_2	: integer := 0;
+    signal c4_3	: integer := 2 * 255 / 16;
+    signal c4_4	: integer := 0;
+    signal c4_5	: integer := -2 * 256 / 2;
+    signal c4_6	: integer := 0;
+    signal c4_7	: integer := -2 * 256 / 2;
+    signal c4_8	: integer := -2 * 256 / 2;
+
 begin 
 
 	update: process (index)
@@ -124,6 +135,16 @@ begin
             coeff_6 <= std_logic_vector(to_signed(c3_6, 9));
             coeff_7 <= std_logic_vector(to_signed(c3_7, 9));
             coeff_8 <= std_logic_vector(to_signed(c3_8, 9));
+        elsif (index = "0100") then
+            coeff_0 <= std_logic_vector(to_signed(c4_0, 9));
+            coeff_1 <= std_logic_vector(to_signed(c4_1, 9));
+            coeff_2 <= std_logic_vector(to_signed(c4_2, 9));
+            coeff_3 <= std_logic_vector(to_signed(c4_3, 9));
+            coeff_4 <= std_logic_vector(to_signed(c4_4, 9));
+            coeff_5 <= std_logic_vector(to_signed(c4_5, 9));
+            coeff_6 <= std_logic_vector(to_signed(c4_6, 9));
+            coeff_7 <= std_logic_vector(to_signed(c4_7, 9));
+            coeff_8 <= std_logic_vector(to_signed(c4_8, 9));
         end if;
     end process update;
 

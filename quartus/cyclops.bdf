@@ -1142,7 +1142,7 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 800 -208 1034 -113))
 )
 (symbol
-	(rect 280 -360 392 -312)
+	(rect 208 -448 320 -400)
 	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
 	(text "inst16" (rect 3 37 31 54)(font "Intel Clear" ))
 	(port
@@ -1170,41 +1170,10 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 64 40)(pt 64 24))
 		(line (pt 16 40)(pt 16 24))
 	)
-	(annotation_block (parameter)(rect 248 -424 391 -367))
+	(annotation_block (parameter)(rect 176 -512 319 -455))
 )
 (symbol
-	(rect 280 -480 392 -432)
-	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
-	(text "inst15" (rect 3 37 31 54)(font "Intel Clear" ))
-	(port
-		(pt 112 32)
-		(output)
-		(text "result[LPM_WIDTH-1..0]" (rect 75 19 208 33)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 75 19 113 33)(font "Arial" (font_size 8)))
-		(line (pt 64 32)(pt 112 32)(line_width 3))
-	)
-	(parameter
-		"LPM_CVALUE"
-		"399"
-		"Unsigned value to which outputs will be set"
-	)
-	(parameter
-		"LPM_WIDTH"
-		"16"
-		"Width of output, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
-	)
-	(drawing
-		(text "(cvalue)" (rect 21 26 68 40)(font "Arial" (font_size 8)))
-		(line (pt 16 24)(pt 64 24))
-		(line (pt 16 40)(pt 64 40))
-		(line (pt 64 40)(pt 64 24))
-		(line (pt 16 40)(pt 16 24))
-	)
-	(annotation_block (parameter)(rect 248 -544 385 -487))
-)
-(symbol
-	(rect 288 -240 400 -192)
+	(rect 216 -328 328 -280)
 	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
 	(text "inst18" (rect 3 37 31 54)(font "Intel Clear" ))
 	(port
@@ -1232,10 +1201,10 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 64 40)(pt 64 24))
 		(line (pt 16 40)(pt 16 24))
 	)
-	(annotation_block (parameter)(rect 256 -304 393 -247))
+	(annotation_block (parameter)(rect 184 -392 321 -335))
 )
 (symbol
-	(rect 288 -120 400 -72)
+	(rect 216 -208 328 -160)
 	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
 	(text "inst17" (rect 3 37 31 54)(font "Intel Clear" ))
 	(port
@@ -1263,7 +1232,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 64 40)(pt 64 24))
 		(line (pt 16 40)(pt 16 24))
 	)
-	(annotation_block (parameter)(rect 256 -184 393 -127))
+	(annotation_block (parameter)(rect 184 -272 321 -215))
 )
 (symbol
 	(rect 456 560 592 760)
@@ -1391,7 +1360,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"LPM_MODULUS"
-		"4"
+		"5"
 		"Optional counter wrap value"
 		(type "PARAMETER_UNSIGNED_DEC")	)
 	(parameter
@@ -1418,6 +1387,68 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 24 128)(pt 16 120))
 	)
 	(annotation_block (parameter)(rect 456 424 698 557))
+)
+(symbol
+	(rect 208 -568 320 -520)
+	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
+	(text "inst15" (rect 3 37 31 54)(font "Intel Clear" ))
+	(port
+		(pt 112 32)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 19 208 33)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 19 113 33)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 112 32)(line_width 3))
+	)
+	(parameter
+		"LPM_CVALUE"
+		"64"
+		"Unsigned value to which outputs will be set"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"16"
+		"Width of output, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+	)
+	(drawing
+		(text "(cvalue)" (rect 21 26 68 40)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 64 24))
+		(line (pt 16 40)(pt 64 40))
+		(line (pt 64 40)(pt 64 24))
+		(line (pt 16 40)(pt 16 24))
+	)
+	(annotation_block (parameter)(rect 176 -632 313 -575))
+)
+(symbol
+	(rect 224 -88 336 -40)
+	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
+	(text "inst20" (rect 3 37 31 54)(font "Intel Clear" ))
+	(port
+		(pt 112 32)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 19 208 33)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 19 113 33)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 112 32)(line_width 3))
+	)
+	(parameter
+		"LPM_CVALUE"
+		"8192"
+		"Unsigned value to which outputs will be set"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"16"
+		"Width of output, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+	)
+	(drawing
+		(text "(cvalue)" (rect 21 26 68 40)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 64 24))
+		(line (pt 16 40)(pt 64 40))
+		(line (pt 64 40)(pt 64 24))
+		(line (pt 16 40)(pt 16 24))
+	)
+	(annotation_block (parameter)(rect 192 -152 329 -95))
 )
 (connector
 	(text "rready" (rect 129 320 159 337)(font "Intel Clear" ))
@@ -1727,30 +1758,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "threshold[0][15..0]" (rect 401 -464 488 -447)(font "Intel Clear" ))
-	(pt 392 -448)
-	(pt 496 -448)
-	(bus)
-)
-(connector
-	(text "threshold[1][15..0]" (rect 400 -344 487 -327)(font "Intel Clear" ))
-	(pt 392 -328)
-	(pt 496 -328)
-	(bus)
-)
-(connector
-	(text "threshold[2][15..0]" (rect 409 -224 496 -207)(font "Intel Clear" ))
-	(pt 400 -208)
-	(pt 504 -208)
-	(bus)
-)
-(connector
-	(text "threshold[3][15..0]" (rect 408 -104 495 -87)(font "Intel Clear" ))
-	(pt 400 -88)
-	(pt 504 -88)
-	(bus)
-)
-(connector
 	(text "kernel_index[3..0]" (rect 626 640 710 657)(font "Intel Clear" ))
 	(pt 592 656)
 	(pt 704 656)
@@ -1760,6 +1767,36 @@ https://fpgasoftware.intel.com/eula.
 	(text "BUTTON_IN" (rect 384 672 440 689)(font "Intel Clear" ))
 	(pt 376 688)
 	(pt 456 688)
+)
+(connector
+	(text "threshold[0][15..0]" (rect 329 -552 416 -535)(font "Intel Clear" ))
+	(pt 320 -536)
+	(pt 424 -536)
+	(bus)
+)
+(connector
+	(text "threshold[1][15..0]" (rect 328 -432 415 -415)(font "Intel Clear" ))
+	(pt 320 -416)
+	(pt 424 -416)
+	(bus)
+)
+(connector
+	(text "threshold[3][15..0]" (rect 336 -192 423 -175)(font "Intel Clear" ))
+	(pt 328 -176)
+	(pt 432 -176)
+	(bus)
+)
+(connector
+	(text "threshold[2][15..0]" (rect 337 -312 424 -295)(font "Intel Clear" ))
+	(pt 424 -296)
+	(pt 328 -296)
+	(bus)
+)
+(connector
+	(text "threshold[4][15..0]" (rect 344 -72 431 -55)(font "Intel Clear" ))
+	(pt 336 -56)
+	(pt 432 -56)
+	(bus)
 )
 (text "CLOCK GENERATION" (rect -192 448 -67 467)(font "Intel Clear" (font_size 8)))
 (text "OV7670 CAPTURE" (rect -192 152 -80 171)(font "Intel Clear" (font_size 8)))
