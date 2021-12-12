@@ -58,6 +58,28 @@ architecture kernel_arch of kernel is
     signal c1_7	: integer := 0;
     signal c1_8	: integer := 0;
 
+    -- High boost coefficients
+    signal c2_0	: integer := -1 * 256 / 16;
+    signal c2_1	: integer := -1 * 256 / 16;
+    signal c2_2	: integer := -1 * 256 / 16;
+    signal c2_3	: integer := -1 * 256 / 16;
+    signal c2_4	: integer := 10 * 256 / 16;
+    signal c2_5	: integer := -1 * 256 / 16;
+    signal c2_6	: integer := -1 * 256 / 16;
+    signal c2_7	: integer := -1 * 256 / 16;
+    signal c2_8	: integer := -1 * 256 / 16;
+
+    -- Low pass coefficients
+    signal c3_0	: integer := 1 * 256 / 16;
+    signal c3_1	: integer := 1 * 256 / 16;
+    signal c3_2	: integer := 1 * 256 / 16;
+    signal c3_3	: integer := 1 * 256 / 16;
+    signal c3_4	: integer := 1 * 256 / 16;
+    signal c3_5	: integer := 1 * 256 / 16;
+    signal c3_6	: integer := 1 * 256 / 16;
+    signal c3_7	: integer := 1 * 256 / 16;
+    signal c3_8	: integer := 1 * 256 / 16;
+
 begin 
 
 	update: process (index)
@@ -82,7 +104,27 @@ begin
             coeff_6 <= std_logic_vector(to_signed(c1_6, 9));
             coeff_7 <= std_logic_vector(to_signed(c1_7, 9));
             coeff_8 <= std_logic_vector(to_signed(c1_8, 9));
-        end if;    
+        elsif (index = "0010") then
+            coeff_0 <= std_logic_vector(to_signed(c2_0, 9));
+            coeff_1 <= std_logic_vector(to_signed(c2_1, 9));
+            coeff_2 <= std_logic_vector(to_signed(c2_2, 9));
+            coeff_3 <= std_logic_vector(to_signed(c2_3, 9));
+            coeff_4 <= std_logic_vector(to_signed(c2_4, 9));
+            coeff_5 <= std_logic_vector(to_signed(c2_5, 9));
+            coeff_6 <= std_logic_vector(to_signed(c2_6, 9));
+            coeff_7 <= std_logic_vector(to_signed(c2_7, 9));
+            coeff_8 <= std_logic_vector(to_signed(c2_8, 9));
+        elsif (index = "0011") then
+            coeff_0 <= std_logic_vector(to_signed(c3_0, 9));
+            coeff_1 <= std_logic_vector(to_signed(c3_1, 9));
+            coeff_2 <= std_logic_vector(to_signed(c3_2, 9));
+            coeff_3 <= std_logic_vector(to_signed(c3_3, 9));
+            coeff_4 <= std_logic_vector(to_signed(c3_4, 9));
+            coeff_5 <= std_logic_vector(to_signed(c3_5, 9));
+            coeff_6 <= std_logic_vector(to_signed(c3_6, 9));
+            coeff_7 <= std_logic_vector(to_signed(c3_7, 9));
+            coeff_8 <= std_logic_vector(to_signed(c3_8, 9));
+        end if;
     end process update;
 
 end architecture kernel_arch;
