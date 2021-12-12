@@ -19,33 +19,26 @@ Intel and sold by Intel or its authorized distributors.  Please
 refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.
 */
-(header "symbol" (version "1.2"))
+(header "symbol" (version "1.1"))
 (symbol
-	(rect 64 64 232 176)
-	(text "multiplier" (rect 5 0 62 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(rect 16 16 224 96)
+	(text "limit" (rect 5 0 19 12)(font "Arial" ))
+	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "kernel_coeff[8..0]" (rect 0 0 103 19)(font "Intel Clear" (font_size 8)))
-		(text "kernel_coeff[8..0]" (rect 21 27 124 46)(font "Intel Clear" (font_size 8)))
+		(text "data_in[21..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "data_in[21..0]" (rect 21 27 72 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "pixel[7..0]" (rect 0 0 59 19)(font "Intel Clear" (font_size 8)))
-		(text "pixel[7..0]" (rect 21 59 80 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 168 48)
+		(pt 208 32)
 		(output)
-		(text "out[17..0]" (rect -48 0 9 19)(font "Intel Clear" (font_size 8)))
-		(text "out[17..0]" (rect 90 43 147 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 168 48)(pt 152 48)(line_width 3))
+		(text "data_out[15..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "data_out[15..0]" (rect 130 27 187 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 152 80))
+		(rectangle (rect 16 16 192 64)(line_width 1))
 	)
 )

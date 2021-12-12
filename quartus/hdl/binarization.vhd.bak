@@ -29,7 +29,8 @@ end entity binarization;
 -----------------------------------------------------------------------------------
 architecture binarization_arch of binarization is
 begin 
-	update: process (data_in)
+
+	update: process (byte)
 	begin
 		if (to_integer(unsigned(data_in)) > to_integer(unsigned(threshold))) then
 			data_out <= '1';

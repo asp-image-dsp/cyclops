@@ -43,16 +43,16 @@ USE altera_mf.altera_mf_components.all;
 ENTITY adder IS
 	PORT
 	(
-		data0x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data1x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data2x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data3x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data4x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data5x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data6x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data7x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		data8x		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		result		: OUT STD_LOGIC_VECTOR (19 DOWNTO 0)
+		data0x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data1x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data2x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data3x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data4x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data5x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data6x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data7x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		data8x		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+		result		: OUT STD_LOGIC_VECTOR (21 DOWNTO 0)
 	);
 END adder;
 
@@ -61,28 +61,28 @@ ARCHITECTURE SYN OF adder IS
 
 --	type ALTERA_MF_LOGIC_2D is array (NATURAL RANGE <>, NATURAL RANGE <>) of STD_LOGIC;
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire1	: ALTERA_MF_LOGIC_2D (8 DOWNTO 0, 15 DOWNTO 0);
-	SIGNAL sub_wire2	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire4	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire5	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire6	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire7	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire8	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire9	: STD_LOGIC_VECTOR (15 DOWNTO 0);
-	SIGNAL sub_wire10	: STD_LOGIC_VECTOR (19 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire1	: ALTERA_MF_LOGIC_2D (8 DOWNTO 0, 17 DOWNTO 0);
+	SIGNAL sub_wire2	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire4	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire5	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire6	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire7	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire8	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire9	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire10	: STD_LOGIC_VECTOR (21 DOWNTO 0);
 
 BEGIN
-	sub_wire9    <= data0x(15 DOWNTO 0);
-	sub_wire8    <= data1x(15 DOWNTO 0);
-	sub_wire7    <= data2x(15 DOWNTO 0);
-	sub_wire6    <= data3x(15 DOWNTO 0);
-	sub_wire5    <= data4x(15 DOWNTO 0);
-	sub_wire4    <= data5x(15 DOWNTO 0);
-	sub_wire3    <= data6x(15 DOWNTO 0);
-	sub_wire2    <= data7x(15 DOWNTO 0);
-	sub_wire0    <= data8x(15 DOWNTO 0);
+	sub_wire9    <= data0x(17 DOWNTO 0);
+	sub_wire8    <= data1x(17 DOWNTO 0);
+	sub_wire7    <= data2x(17 DOWNTO 0);
+	sub_wire6    <= data3x(17 DOWNTO 0);
+	sub_wire5    <= data4x(17 DOWNTO 0);
+	sub_wire4    <= data5x(17 DOWNTO 0);
+	sub_wire3    <= data6x(17 DOWNTO 0);
+	sub_wire2    <= data7x(17 DOWNTO 0);
+	sub_wire0    <= data8x(17 DOWNTO 0);
 	sub_wire1(8, 0)    <= sub_wire0(0);
 	sub_wire1(8, 1)    <= sub_wire0(1);
 	sub_wire1(8, 2)    <= sub_wire0(2);
@@ -99,6 +99,8 @@ BEGIN
 	sub_wire1(8, 13)    <= sub_wire0(13);
 	sub_wire1(8, 14)    <= sub_wire0(14);
 	sub_wire1(8, 15)    <= sub_wire0(15);
+	sub_wire1(8, 16)    <= sub_wire0(16);
+	sub_wire1(8, 17)    <= sub_wire0(17);
 	sub_wire1(7, 0)    <= sub_wire2(0);
 	sub_wire1(7, 1)    <= sub_wire2(1);
 	sub_wire1(7, 2)    <= sub_wire2(2);
@@ -115,6 +117,8 @@ BEGIN
 	sub_wire1(7, 13)    <= sub_wire2(13);
 	sub_wire1(7, 14)    <= sub_wire2(14);
 	sub_wire1(7, 15)    <= sub_wire2(15);
+	sub_wire1(7, 16)    <= sub_wire2(16);
+	sub_wire1(7, 17)    <= sub_wire2(17);
 	sub_wire1(6, 0)    <= sub_wire3(0);
 	sub_wire1(6, 1)    <= sub_wire3(1);
 	sub_wire1(6, 2)    <= sub_wire3(2);
@@ -131,6 +135,8 @@ BEGIN
 	sub_wire1(6, 13)    <= sub_wire3(13);
 	sub_wire1(6, 14)    <= sub_wire3(14);
 	sub_wire1(6, 15)    <= sub_wire3(15);
+	sub_wire1(6, 16)    <= sub_wire3(16);
+	sub_wire1(6, 17)    <= sub_wire3(17);
 	sub_wire1(5, 0)    <= sub_wire4(0);
 	sub_wire1(5, 1)    <= sub_wire4(1);
 	sub_wire1(5, 2)    <= sub_wire4(2);
@@ -147,6 +153,8 @@ BEGIN
 	sub_wire1(5, 13)    <= sub_wire4(13);
 	sub_wire1(5, 14)    <= sub_wire4(14);
 	sub_wire1(5, 15)    <= sub_wire4(15);
+	sub_wire1(5, 16)    <= sub_wire4(16);
+	sub_wire1(5, 17)    <= sub_wire4(17);
 	sub_wire1(4, 0)    <= sub_wire5(0);
 	sub_wire1(4, 1)    <= sub_wire5(1);
 	sub_wire1(4, 2)    <= sub_wire5(2);
@@ -163,6 +171,8 @@ BEGIN
 	sub_wire1(4, 13)    <= sub_wire5(13);
 	sub_wire1(4, 14)    <= sub_wire5(14);
 	sub_wire1(4, 15)    <= sub_wire5(15);
+	sub_wire1(4, 16)    <= sub_wire5(16);
+	sub_wire1(4, 17)    <= sub_wire5(17);
 	sub_wire1(3, 0)    <= sub_wire6(0);
 	sub_wire1(3, 1)    <= sub_wire6(1);
 	sub_wire1(3, 2)    <= sub_wire6(2);
@@ -179,6 +189,8 @@ BEGIN
 	sub_wire1(3, 13)    <= sub_wire6(13);
 	sub_wire1(3, 14)    <= sub_wire6(14);
 	sub_wire1(3, 15)    <= sub_wire6(15);
+	sub_wire1(3, 16)    <= sub_wire6(16);
+	sub_wire1(3, 17)    <= sub_wire6(17);
 	sub_wire1(2, 0)    <= sub_wire7(0);
 	sub_wire1(2, 1)    <= sub_wire7(1);
 	sub_wire1(2, 2)    <= sub_wire7(2);
@@ -195,6 +207,8 @@ BEGIN
 	sub_wire1(2, 13)    <= sub_wire7(13);
 	sub_wire1(2, 14)    <= sub_wire7(14);
 	sub_wire1(2, 15)    <= sub_wire7(15);
+	sub_wire1(2, 16)    <= sub_wire7(16);
+	sub_wire1(2, 17)    <= sub_wire7(17);
 	sub_wire1(1, 0)    <= sub_wire8(0);
 	sub_wire1(1, 1)    <= sub_wire8(1);
 	sub_wire1(1, 2)    <= sub_wire8(2);
@@ -211,6 +225,8 @@ BEGIN
 	sub_wire1(1, 13)    <= sub_wire8(13);
 	sub_wire1(1, 14)    <= sub_wire8(14);
 	sub_wire1(1, 15)    <= sub_wire8(15);
+	sub_wire1(1, 16)    <= sub_wire8(16);
+	sub_wire1(1, 17)    <= sub_wire8(17);
 	sub_wire1(0, 0)    <= sub_wire9(0);
 	sub_wire1(0, 1)    <= sub_wire9(1);
 	sub_wire1(0, 2)    <= sub_wire9(2);
@@ -227,7 +243,9 @@ BEGIN
 	sub_wire1(0, 13)    <= sub_wire9(13);
 	sub_wire1(0, 14)    <= sub_wire9(14);
 	sub_wire1(0, 15)    <= sub_wire9(15);
-	result    <= sub_wire10(19 DOWNTO 0);
+	sub_wire1(0, 16)    <= sub_wire9(16);
+	sub_wire1(0, 17)    <= sub_wire9(17);
+	result    <= sub_wire10(21 DOWNTO 0);
 
 	parallel_add_component : parallel_add
 	GENERIC MAP (
@@ -237,8 +255,8 @@ BEGIN
 		result_alignment => "LSB",
 		shift => 0,
 		size => 9,
-		width => 16,
-		widthr => 20,
+		width => 18,
+		widthr => 22,
 		lpm_type => "parallel_add"
 	)
 	PORT MAP (
@@ -262,28 +280,28 @@ END SYN;
 -- Retrieval info: CONSTANT: RESULT_ALIGNMENT STRING "LSB"
 -- Retrieval info: CONSTANT: SHIFT NUMERIC "0"
 -- Retrieval info: CONSTANT: SIZE NUMERIC "9"
--- Retrieval info: CONSTANT: WIDTH NUMERIC "16"
--- Retrieval info: CONSTANT: WIDTHR NUMERIC "20"
--- Retrieval info: USED_PORT: data0x 0 0 16 0 INPUT NODEFVAL "data0x[15..0]"
--- Retrieval info: USED_PORT: data1x 0 0 16 0 INPUT NODEFVAL "data1x[15..0]"
--- Retrieval info: USED_PORT: data2x 0 0 16 0 INPUT NODEFVAL "data2x[15..0]"
--- Retrieval info: USED_PORT: data3x 0 0 16 0 INPUT NODEFVAL "data3x[15..0]"
--- Retrieval info: USED_PORT: data4x 0 0 16 0 INPUT NODEFVAL "data4x[15..0]"
--- Retrieval info: USED_PORT: data5x 0 0 16 0 INPUT NODEFVAL "data5x[15..0]"
--- Retrieval info: USED_PORT: data6x 0 0 16 0 INPUT NODEFVAL "data6x[15..0]"
--- Retrieval info: USED_PORT: data7x 0 0 16 0 INPUT NODEFVAL "data7x[15..0]"
--- Retrieval info: USED_PORT: data8x 0 0 16 0 INPUT NODEFVAL "data8x[15..0]"
--- Retrieval info: USED_PORT: result 0 0 20 0 OUTPUT NODEFVAL "result[19..0]"
--- Retrieval info: CONNECT: @data 1 0 16 0 data0x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 1 16 0 data1x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 2 16 0 data2x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 3 16 0 data3x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 4 16 0 data4x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 5 16 0 data5x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 6 16 0 data6x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 7 16 0 data7x 0 0 16 0
--- Retrieval info: CONNECT: @data 1 8 16 0 data8x 0 0 16 0
--- Retrieval info: CONNECT: result 0 0 20 0 @result 0 0 20 0
+-- Retrieval info: CONSTANT: WIDTH NUMERIC "18"
+-- Retrieval info: CONSTANT: WIDTHR NUMERIC "22"
+-- Retrieval info: USED_PORT: data0x 0 0 18 0 INPUT NODEFVAL "data0x[17..0]"
+-- Retrieval info: USED_PORT: data1x 0 0 18 0 INPUT NODEFVAL "data1x[17..0]"
+-- Retrieval info: USED_PORT: data2x 0 0 18 0 INPUT NODEFVAL "data2x[17..0]"
+-- Retrieval info: USED_PORT: data3x 0 0 18 0 INPUT NODEFVAL "data3x[17..0]"
+-- Retrieval info: USED_PORT: data4x 0 0 18 0 INPUT NODEFVAL "data4x[17..0]"
+-- Retrieval info: USED_PORT: data5x 0 0 18 0 INPUT NODEFVAL "data5x[17..0]"
+-- Retrieval info: USED_PORT: data6x 0 0 18 0 INPUT NODEFVAL "data6x[17..0]"
+-- Retrieval info: USED_PORT: data7x 0 0 18 0 INPUT NODEFVAL "data7x[17..0]"
+-- Retrieval info: USED_PORT: data8x 0 0 18 0 INPUT NODEFVAL "data8x[17..0]"
+-- Retrieval info: USED_PORT: result 0 0 22 0 OUTPUT NODEFVAL "result[21..0]"
+-- Retrieval info: CONNECT: @data 1 0 18 0 data0x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 1 18 0 data1x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 2 18 0 data2x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 3 18 0 data3x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 4 18 0 data4x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 5 18 0 data5x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 6 18 0 data6x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 7 18 0 data7x 0 0 18 0
+-- Retrieval info: CONNECT: @data 1 8 18 0 data8x 0 0 18 0
+-- Retrieval info: CONNECT: result 0 0 22 0 @result 0 0 22 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL adder.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL adder.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL adder.cmp FALSE

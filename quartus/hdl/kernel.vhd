@@ -37,22 +37,22 @@ end entity kernel;
 architecture kernel_arch of kernel is
 
     -- Edge Detection Coefficients
-    signal c0_0	: integer := 1;
-    signal c0_1	: integer := 1;
-    signal c0_2	: integer := 1;
-    signal c0_3	: integer := 1;
-    signal c0_4	: integer := -8;
-    signal c0_5	: integer := 1;
-    signal c0_6	: integer := 1;
-    signal c0_7	: integer := 1;
-    signal c0_8	: integer := 1;
+    signal c0_0	: integer := 1 * 256 / 8;
+    signal c0_1	: integer := 1 * 256 / 8;
+    signal c0_2	: integer := 1 * 256 / 8;
+    signal c0_3	: integer := 1 * 256 / 8;
+    signal c0_4	: integer := -8 * 256 / 8;
+    signal c0_5	: integer := 1 * 256 / 8;
+    signal c0_6	: integer := 1 * 256 / 8;
+    signal c0_7	: integer := 1 * 256 / 8;
+    signal c0_8	: integer := 1 * 256 / 8;
 
     -- Wire coefficients
     signal c1_0	: integer := 0;
     signal c1_1	: integer := 0;
     signal c1_2	: integer := 0;
     signal c1_3	: integer := 0;
-    signal c1_4	: integer := 1;
+    signal c1_4	: integer := 1 * 255;
     signal c1_5	: integer := 0;
     signal c1_6	: integer := 0;
     signal c1_7	: integer := 0;
