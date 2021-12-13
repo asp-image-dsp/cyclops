@@ -1,0 +1,53 @@
+-----------------------------------------------------------------------------------
+-- File:        threshold.vhd
+-- Date:        20211213
+-- Author:      Rafael N. Trozzo
+-- Description: Module for selecting the threshold
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+-- Package
+-----------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-----------------------------------------------------------------------------------
+-- Entity
+-----------------------------------------------------------------------------------
+entity threshold is
+	port(
+        signal index        : in std_logic_vector(3 downto 0);
+        signal threshold    : out std_logic_vector(15 downto 0)
+    );
+end entity threshold;
+
+-----------------------------------------------------------------------------------
+-- Architecture
+-----------------------------------------------------------------------------------
+architecture threshold_arch of threshold is
+    signal t0   : integer := 13000;
+    signal t1   : integer := 9000;
+    signal t2   : integer := 700;
+    signal t3   : integer := 380;
+    signal t4   : integer := 0;
+    signal t5   : integer := 16;
+begin 
+	update: process (index)
+    begin
+        if (index = "0000") then
+            threshold <= std_logic_vector(t0);
+        elsif (index = "0001") then
+            threshold <= std_logic_vector(t1);
+        elsif (index = "0010") then
+            threshold <= std_logic_vector(t2);
+        elsif (index = "0011") then
+            threshold <= std_logic_vector(t3);
+        elsif (index = "0100") then
+            threshold <= std_logic_vector(t4);
+        elsif (index = "0101") then
+            threshold <= std_logic_vector(t5);
+        end if;
+    end process update;
+
+end architecture threshold_arch;
