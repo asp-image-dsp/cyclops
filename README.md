@@ -3,7 +3,7 @@ Real time digital image processing in a Cyclone IV FPGA, using the DE0 Nano deve
 
 Filters are changed in real time with the board's buttons.
 ## General Setup
-<img src="./support/setup.JPG" width=300>
+<img src="./support/gif.gif" width=500>
 
 ## High-Boost
 <img src="./support/high-boost.JPG" width=300>
@@ -15,7 +15,7 @@ Filters are changed in real time with the board's buttons.
 <img src="./support/laplacian+opening.JPG" width=300>
 
 ## Low-pass
-<img src="./support/low-pass.JPG" width=300>
+<img src="./support/low-pass.jpg" width=300>
 
 ## Sobel
 <img src="./support/sobel.JPG" width=300>
