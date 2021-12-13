@@ -2,7 +2,7 @@
 Real time digital image processing in a Cyclone IV FPGA, using the DE0 Nano development board and OV7670 camera module.
 
 ## General Setup
-<img src="./support/setup.jpg" width=300>
+<img src="./support/setup.JPG" width=300>
 
 ## Laplacian
 <img src="./support/laplacian.jpg" width=300>
