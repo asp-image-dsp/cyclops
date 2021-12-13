@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------------------
+-- File:        step_counter.vhd
+-- Date:        20211213
+-- Author:      Facundo D. Farall, Lucas A. Kammann
+-- Description: Module for counting step by step
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+-- Package
+-----------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-----------------------------------------------------------------------------------
+-- Entity
+-----------------------------------------------------------------------------------
+entity step_counter is
+    generic(
+        step    : integer
+    )
+
+	port(
+        signal clock    : in std_logic;
+        signal data_out : out std_logic_vector(15 downto 0)
+    );
+end entity step_counter;
+
+-----------------------------------------------------------------------------------
+-- Architecture
+-----------------------------------------------------------------------------------
+architecture step_counter_arch of step_counter is
+    signal dout : std_logic_vector(15 downto 0);
+begin
+    data_out <= dout;
+
+    counter: process (clock)
+    begin
+        dout <= std_logic_vector(unsigned(dout) + step);
+    end process counter;
+end architecture step_counter_arch;
