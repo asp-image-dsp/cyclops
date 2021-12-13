@@ -5,16 +5,16 @@ Real time digital image processing in a Cyclone IV FPGA, using the DE0 Nano deve
 <img src="./support/setup.JPG" width=300>
 
 ## Laplacian
-<img src="./support/laplacian.jpg" width=300>
+<img src="./support/laplacian.JPG" width=300>
 
 ## Laplacian + Opening
-<img src="./support/laplacian+opening.jpg" width=300>
+<img src="./support/laplacian+opening.JPG" width=300>
 
 ## High-Boost
-<img src="./support/high-boost.jpg" width=300>
+<img src="./support/high-boost.JPG" width=300>
 
 ## Sobel
-<img src="./support/sobel.jpg" width=300>
+<img src="./support/sobel.JPG" width=300>
 
 ## Block Diagram
 ![Alt text](./design/presentation.jpg?raw=true "Project scheme")
