@@ -1,8 +1,12 @@
 # Cyclops
 Real time digital image processing in a Cyclone IV FPGA, using the DE0 Nano development board and OV7670 camera module.
 
+Filters are changed in real time with the board's buttons.
 ## General Setup
 <img src="./support/setup.JPG" width=300>
+
+## High-Boost
+<img src="./support/high-boost.JPG" width=300>
 
 ## Laplacian
 <img src="./support/laplacian.JPG" width=300>
@@ -10,8 +14,8 @@ Real time digital image processing in a Cyclone IV FPGA, using the DE0 Nano deve
 ## Laplacian + Opening
 <img src="./support/laplacian+opening.JPG" width=300>
 
-## High-Boost
-<img src="./support/high-boost.JPG" width=300>
+## Low-pass
+<img src="./support/low-pass.JPG" width=300>
 
 ## Sobel
 <img src="./support/sobel.JPG" width=300>
