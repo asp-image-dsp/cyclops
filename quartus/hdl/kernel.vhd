@@ -37,15 +37,15 @@ end entity kernel;
 architecture kernel_arch of kernel is
 
     -- Edge Detection Coefficients
-    signal c0_0	: integer := 1 * 256 / 8;
-    signal c0_1	: integer := 1 * 256 / 8;
-    signal c0_2	: integer := 1 * 256 / 8;
-    signal c0_3	: integer := 1 * 256 / 8;
+    signal c0_0	: integer := 1 * 255 / 8;
+    signal c0_1	: integer := 1 * 255 / 8;
+    signal c0_2	: integer := 1 * 255 / 8;
+    signal c0_3	: integer := 1 * 255 / 8;
     signal c0_4	: integer := -8 * 256 / 8;
-    signal c0_5	: integer := 1 * 256 / 8;
-    signal c0_6	: integer := 1 * 256 / 8;
-    signal c0_7	: integer := 1 * 256 / 8;
-    signal c0_8	: integer := 1 * 256 / 8;
+    signal c0_5	: integer := 1 * 255 / 8;
+    signal c0_6	: integer := 1 * 255 / 8;
+    signal c0_7	: integer := 1 * 255 / 8;
+    signal c0_8	: integer := 1 * 255 / 8;
 
     -- Wire coefficients
     signal c1_0	: integer := 0;
@@ -70,16 +70,16 @@ architecture kernel_arch of kernel is
     signal c2_8	: integer := -1 * 256 / 16;
 
     -- Low pass coefficients
-    signal c3_0	: integer := 1 * 256 / 16;
-    signal c3_1	: integer := 1 * 256 / 16;
-    signal c3_2	: integer := 1 * 256 / 16;
-    signal c3_3	: integer := 1 * 256 / 16;
-    signal c3_4	: integer := 1 * 256 / 16;
-    signal c3_5	: integer := 1 * 256 / 16;
-    signal c3_6	: integer := 1 * 256 / 16;
-    signal c3_7	: integer := 1 * 256 / 16;
-    signal c3_8	: integer := 1 * 256 / 16;
-
+    signal c3_0	: integer := 1 * 255 / 16;
+    signal c3_1	: integer := 1 * 255 / 16;
+    signal c3_2	: integer := 1 * 255 / 16;
+    signal c3_3	: integer := 1 * 255 / 16;
+    signal c3_4	: integer := 1 * 255 / 16;
+    signal c3_5	: integer := 1 * 255 / 16;
+    signal c3_6	: integer := 1 * 255 / 16;
+    signal c3_7	: integer := 1 * 255 / 16;
+    signal c3_8	: integer := 1 * 255 / 16;
+	 
     -- Sobel coefficients
     signal c4_0	: integer := 2 * 255 / 2;
     signal c4_1	: integer := 2 * 255 / 2;

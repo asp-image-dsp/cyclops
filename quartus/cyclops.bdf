@@ -1420,7 +1420,7 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 176 -632 313 -575))
 )
 (symbol
-	(rect 224 -88 336 -40)
+	(rect 232 -88 344 -40)
 	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
 	(text "inst20" (rect 3 37 31 54)(font "Intel Clear" ))
 	(port
@@ -1432,7 +1432,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"LPM_CVALUE"
-		"8192"
+		"16"
 		"Unsigned value to which outputs will be set"
 	)
 	(parameter
@@ -1448,7 +1448,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 64 40)(pt 64 24))
 		(line (pt 16 40)(pt 16 24))
 	)
-	(annotation_block (parameter)(rect 192 -152 329 -95))
+	(annotation_block (parameter)(rect 184 -152 321 -95))
 )
 (connector
 	(text "rready" (rect 129 320 159 337)(font "Intel Clear" ))
@@ -1793,9 +1793,9 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "threshold[4][15..0]" (rect 344 -72 431 -55)(font "Intel Clear" ))
-	(pt 336 -56)
-	(pt 432 -56)
+	(text "threshold[4][15..0]" (rect 352 -72 439 -55)(font "Intel Clear" ))
+	(pt 344 -56)
+	(pt 440 -56)
 	(bus)
 )
 (text "CLOCK GENERATION" (rect -192 448 -67 467)(font "Intel Clear" (font_size 8)))
