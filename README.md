@@ -14,6 +14,9 @@ Filters are changed in real time with the board's buttons.
 ## Laplacian + Opening
 <img src="./support/laplacian+opening.JPG" width=300>
 
+## All-pass (No processing)
+<img src="./support/wire.jpeg" width=300>
+
 ## Low-pass
 <img src="./support/low-pass.jpg" width=300>
 
