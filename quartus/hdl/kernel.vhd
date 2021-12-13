@@ -36,27 +36,27 @@ end entity kernel;
 -----------------------------------------------------------------------------------
 architecture kernel_arch of kernel is
 
-    -- Edge Detection Coefficients
-    signal c0_0	: integer := 1 * 255 / 8;
-    signal c0_1	: integer := 1 * 255 / 8;
-    signal c0_2	: integer := 1 * 255 / 8;
-    signal c0_3	: integer := 1 * 255 / 8;
-    signal c0_4	: integer := -8 * 256 / 8;
-    signal c0_5	: integer := 1 * 255 / 8;
-    signal c0_6	: integer := 1 * 255 / 8;
-    signal c0_7	: integer := 1 * 255 / 8;
-    signal c0_8	: integer := 1 * 255 / 8;
-
     -- Wire coefficients
-    signal c1_0	: integer := 0;
-    signal c1_1	: integer := 0;
-    signal c1_2	: integer := 0;
-    signal c1_3	: integer := 0;
-    signal c1_4	: integer := 1 * 255;
-    signal c1_5	: integer := 0;
-    signal c1_6	: integer := 0;
-    signal c1_7	: integer := 0;
-    signal c1_8	: integer := 0;
+    signal c0_0	: integer := 0;
+    signal c0_1	: integer := 0;
+    signal c0_2	: integer := 0;
+    signal c0_3	: integer := 0;
+    signal c0_4	: integer := 1 * 255;
+    signal c0_5	: integer := 0;
+    signal c0_6	: integer := 0;
+    signal c0_7	: integer := 0;
+    signal c0_8	: integer := 0;
+
+    -- Low pass coefficients
+    signal c1_0	: integer := 1 * 255 / 16;
+    signal c1_1	: integer := 1 * 255 / 16;
+    signal c1_2	: integer := 1 * 255 / 16;
+    signal c1_3	: integer := 1 * 255 / 16;
+    signal c1_4	: integer := 1 * 255 / 16;
+    signal c1_5	: integer := 1 * 255 / 16;
+    signal c1_6	: integer := 1 * 255 / 16;
+    signal c1_7	: integer := 1 * 255 / 16;
+    signal c1_8	: integer := 1 * 255 / 16;
 
     -- High boost coefficients
     signal c2_0	: integer := -1 * 256 / 16;
@@ -69,27 +69,38 @@ architecture kernel_arch of kernel is
     signal c2_7	: integer := -1 * 256 / 16;
     signal c2_8	: integer := -1 * 256 / 16;
 
-    -- Low pass coefficients
-    signal c3_0	: integer := 1 * 255 / 16;
-    signal c3_1	: integer := 1 * 255 / 16;
-    signal c3_2	: integer := 1 * 255 / 16;
-    signal c3_3	: integer := 1 * 255 / 16;
-    signal c3_4	: integer := 1 * 255 / 16;
-    signal c3_5	: integer := 1 * 255 / 16;
-    signal c3_6	: integer := 1 * 255 / 16;
-    signal c3_7	: integer := 1 * 255 / 16;
-    signal c3_8	: integer := 1 * 255 / 16;
+    -- Laplacian Coefficients
+    signal c3_0	: integer := 1 * 255 / 8;
+    signal c3_1	: integer := 1 * 255 / 8;
+    signal c3_2	: integer := 1 * 255 / 8;
+    signal c3_3	: integer := 1 * 255 / 8;
+    signal c3_4	: integer := -8 * 256 / 8;
+    signal c3_5	: integer := 1 * 255 / 8;
+    signal c3_6	: integer := 1 * 255 / 8;
+    signal c3_7	: integer := 1 * 255 / 8;
+    signal c3_8	: integer := 1 * 255 / 8;
+
+    -- Laplacian Coefficients
+    signal c4_0	: integer := 1 * 255 / 8;
+    signal c4_1	: integer := 1 * 255 / 8;
+    signal c4_2	: integer := 1 * 255 / 8;
+    signal c4_3	: integer := 1 * 255 / 8;
+    signal c4_4	: integer := -8 * 256 / 8;
+    signal c4_5	: integer := 1 * 255 / 8;
+    signal c4_6	: integer := 1 * 255 / 8;
+    signal c4_7	: integer := 1 * 255 / 8;
+    signal c4_8	: integer := 1 * 255 / 8;
 	 
     -- Sobel coefficients
-    signal c4_0	: integer := 2 * 255 / 2;
-    signal c4_1	: integer := 2 * 255 / 2;
-    signal c4_2	: integer := 0;
-    signal c4_3	: integer := 2 * 255 / 16;
-    signal c4_4	: integer := 0;
-    signal c4_5	: integer := -2 * 256 / 2;
-    signal c4_6	: integer := 0;
-    signal c4_7	: integer := -2 * 256 / 2;
-    signal c4_8	: integer := -2 * 256 / 2;
+    signal c5_0	: integer := 2 * 255 / 2;
+    signal c5_1	: integer := 2 * 255 / 2;
+    signal c5_2	: integer := 0;
+    signal c5_3	: integer := 2 * 255 / 16;
+    signal c5_4	: integer := 0;
+    signal c5_5	: integer := -2 * 256 / 2;
+    signal c5_6	: integer := 0;
+    signal c5_7	: integer := -2 * 256 / 2;
+    signal c5_8	: integer := -2 * 256 / 2;
 
 begin 
 
@@ -145,6 +156,16 @@ begin
             coeff_6 <= std_logic_vector(to_signed(c4_6, 9));
             coeff_7 <= std_logic_vector(to_signed(c4_7, 9));
             coeff_8 <= std_logic_vector(to_signed(c4_8, 9));
+        elsif (index = "0101") then
+            coeff_0 <= std_logic_vector(to_signed(c5_0, 9));
+            coeff_1 <= std_logic_vector(to_signed(c5_1, 9));
+            coeff_2 <= std_logic_vector(to_signed(c5_2, 9));
+            coeff_3 <= std_logic_vector(to_signed(c5_3, 9));
+            coeff_4 <= std_logic_vector(to_signed(c5_4, 9));
+            coeff_5 <= std_logic_vector(to_signed(c5_5, 9));
+            coeff_6 <= std_logic_vector(to_signed(c5_6, 9));
+            coeff_7 <= std_logic_vector(to_signed(c5_7, 9));
+            coeff_8 <= std_logic_vector(to_signed(c5_8, 9));
         end if;
     end process update;
 
